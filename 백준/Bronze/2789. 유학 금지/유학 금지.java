@@ -6,13 +6,8 @@ public class Main {
 		String input = sc.nextLine();
 		sc.close();
 
-		char[] removeAlpha = "CAMBRIDGE".toCharArray();
-    
-		for (int i = 0 ; i < removeAlpha.length ; i++) {
-			if (input.indexOf(removeAlpha[i]) > -1) {
-				input = input.replace(String.valueOf(removeAlpha[i]), "");
-			}
-		}
-		System.out.println(input);
+        input = input.replaceAll("[CAMBRIDGE]", "");
+		
+        System.out.println(input);
 	}
 }
